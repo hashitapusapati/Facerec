@@ -1,0 +1,399 @@
+/* ---------------- RESET & GENERAL STYLES ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f4f7fc;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #003366;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.navbar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f7b733;
+}
+
+/* ---------------- SCROLLING MESSAGE ---------------- */
+/* Scrolling Message Styles */
+.scrolling-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f8d210; /* Light Yellow Background */
+  color: #333; /* Dark Text */
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: relative; /* Ensure it stays below the navbar */
+  margin-top: 10px; /* Space below the navbar */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  height: 90vh;
+  background: url("/public/assets/lendi.JPG") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-blend-mode: darken;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* ---------------- BUTTON STYLES ---------------- */
+.btn-primary {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  opacity: 0.9;
+}
+
+/* ---------------- CAMERA ATTENDANCE ---------------- */
+.camera-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.camera-container h2 {
+  color: #1e3c72;
+}
+
+.camera-container button {
+  background-color: #28a745;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.camera-container button:hover {
+  background-color: #218838;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+.search-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Attendance Table */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.attendance-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Alternating row colors */
+.attendance-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Status colors */
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+/* Main Container */
+.attendance-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.report-title {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.attendance-table th {
+  background-color: #2a5298;
+  color: white;
+}
+
+/* Alternate Row Coloring */
+.even-row {
+  background-color: #f8f9fa;
+}
+
+.odd-row {
+  background-color: #ffffff;
+}
+
+/* Status Color Coding */
+.status-present {
+  color: green;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: red;
+  font-weight: bold;
+}
+
+/* No Data Message */
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 15px;
+}
+
+
+/* Move Attendance Report Below Camera */
+.attendance-page .camera-container {
+  margin-bottom: 30px;
+}
+
+.attendance-page .attendance-report {
+  margin-top: 10px;
+}
+
+/* Styling for search input */
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+/* Responsive Table */
+.attendance-report .table-container {
+  overflow-x: auto;
+}
+
+/* Status Color Coding */
+.status-present {
+  color: green;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .dashboard {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .dashboard h2 {
+    font-size: 20px;
+  }
+
+  .dashboard th, .dashboard td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
